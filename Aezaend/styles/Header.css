@@ -1,0 +1,119 @@
+Header{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.Header__content{
+    align-items: center;
+    justify-content: center;
+    /*max-width: 1404px;*/
+    justify-content: space-between;
+    width: 100%;
+}
+.Header__content-navigation{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 0;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.Header-navigation__logo{
+    cursor: pointer;
+    width: 190px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    transition: all 300ms linear;
+}
+.Header-navigation__logo:hover {
+    margin-left: -36px
+}
+.Header-navigation__item{
+    display: flex;
+}
+.box-wrapper{
+    width: 36px;
+    position: relative;
+    margin-left: 0px;
+    transition: all 300ms linear;
+}
+.Header-navigation__logo:hover > .box-wrapper {
+    margin-left: 3px;
+}
+
+.box-wrapper > .a,
+.box-wrapper > .z {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate3d(-5px,0,0) scale(1);
+}
+
+.a{
+    transition: all 300ms linear, scale 300ms cubic-bezier(.17,.67,.92,.05);
+    
+}
+.z{
+    transition: all 200ms linear, scale 200ms cubic-bezier(.17,.67,.92,.05);
+}
+
+.Header-navigation__logo:hover > .box-wrapper > .a,
+.Header-navigation__logo:hover > .box-wrapper > .z{
+    opacity: 1;    
+    transform: translate3d(0,0,0) scale(1.01);
+}
+
+.dooropen
+{
+    display: block;
+}
+.Header-navigation__little
+{
+    background-color: rgb(244, 244, 244);
+    border-radius: 50%;
+    border: none;
+    line-height: 0;
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.Header__content-wrap
+{
+    display: flex;
+
+}
+.Header-navigation__little svg
+{
+  position: absolute;
+}
+@media screen and (max-width:800px) {
+    .Header-navigation__little
+    {
+        display: flex;
+    }
+    .Header-navigation__item
+    {
+        display: none;
+    }
+    .UIButton{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:100px) {
+    .UIButton{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:600px) {
+    .UIButton{
+        font-size: 22px;
+    }
+}

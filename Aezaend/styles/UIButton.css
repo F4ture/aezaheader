@@ -1,0 +1,79 @@
+.UIButton{
+    font-size: 16px;
+    color: black;
+    padding: 4px 12px;
+    height: 40px;
+    border-radius: 6px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px;
+    flex-shrink: 1;
+}
+.UIButton:hover{
+    opacity: 0.65;
+}
+.UIButton svg {
+    transform: rotate(180deg);
+    transition: all linear 0.2s;
+}
+.UIButton:hover svg:not(.browsericon,.closeddoor,.door) {
+    transform: rotate(360deg);
+}
+.circle::after{
+    content: "";
+    opacity: 0;
+    border-radius: 100%;
+    background-color: black;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle{
+    position: relative;
+}
+.UIButton__language{
+    font-size: 16px;
+    color: black;
+    padding: 4px 12px;
+    height: 40px;
+    border-radius: 6px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px;
+}
+.UIButton__language:hover .circle::after
+{    
+opacity: 1;
+}
+.UIButton__register{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 0;
+    padding: 0 ;
+}
+.closeddoor{
+    display: none;
+    margin-left: -5px;
+}
+.UIButton__register :nth-child(2){
+    margin-bottom: -5px;
+}
+
+.UIButton__register:hover > .closeddoor{
+    display: initial;    
+}
+.UIButton__register:hover > .door{
+    display: none;    
+}
